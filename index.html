@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+	<title>Canopy React Autoscale Input</title>
+</head>
+
+<body>
+	<div class="cps-topnav">
+		<div class="cps-topnav__bar"></div>
+		<div class="cps-topnav__content" data-reactid=".0.0.1"><span class="cps-topnav__content__brand" data-reactid=".0.0.1.0"><img src="canopy-logotype.svg" alt="Company Logo" data-reactid=".0.0.1.0.0"></span>
+			<ul class="cps-topnav__content__menu">
+				<li><a href="https://github.com/CanopyTax/cpr-autoscale-input">Canopy React Autoscale Input on Github</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="cps-nav-content +full">
+		<div class="cps-fixed-focus cps-card">
+			<div class="cps-card__header cps-subheader">
+				Canopy React Autoscale Input
+			</div>
+			<div class="cps-card__body">
+				<div class="form-group">
+					<div id='cpAutoscaleInput' style="margin-top: 8px;">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<link type="text/css" href="node_modules/canopy-styleguide/build/styleguide.css" rel="stylesheet">
+	<script type="text/javascript" src="node_modules/react/dist/react.min.js"></script>
+  <script type="text/javascript" src="node_modules/react-dom/dist/react-dom.min.js"></script>
+  <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="build/cpr-autoscale-input.js"></script>
+	<script>
+		ReactDOM.render(
+			React.createElement(window.CanopyAutoscaleInput, {
+        propName: 'test',
+        inputAttrs: {
+          placeholder: 'Enter your name...',
+          className: 'cps-form-control-resize'
+        },
+        onChange: function(property, event) {
+          console.log(event);
+			  }
+      }),
+			document.getElementById('cpAutoscaleInput')
+		);
+	</script>
+</body>
+
+</html>
