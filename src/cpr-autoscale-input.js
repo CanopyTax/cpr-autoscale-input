@@ -22,7 +22,6 @@ var CanopyAutoscaleInput = React.createClass({
     if (this.props.inputAttrs && this.props.inputAttrs.placeholder) text = text || this.props.inputAttrs.placeholder;
     text = text.length < 2 ? 'HI' : text;
     text = text.replace(/\s/g, "_");
-    if(this.props.inputAttrs && this.props.inputAttrs.maxLength) text = text.substring(0,this.props.inputAttrs.maxLength);
 
     let $input = $(input);
     var measuredEl = $(html($input.css('font-size'), $input.css('font-family').replace(/\"/g, "'")));
