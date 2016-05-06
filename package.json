@@ -7,7 +7,7 @@
     "dist": "webpack --optimize-minimize",
     "compile": "babel src --out-dir lib",
     "build": "npm run dist && npm run compile",
-		"prepublish": "npm run compile"
+    "prepublish": "npm run compile"
   },
   "repository": {
     "type": "git",
