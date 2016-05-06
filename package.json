@@ -1,6 +1,6 @@
 {
   "name": "cpr-autoscale-input",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A React component for auto sizing an input based on the content within it",
   "main": "lib/cpr-autoscale-input.js",
   "scripts": {
