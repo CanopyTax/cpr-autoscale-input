@@ -13,6 +13,7 @@ var CanopyAutoscaleInput = React.createClass({
 
 	componentDidMount: function() {
 		this.measureAndSize();
+		if (this.props.getInputRef) this.props.getInputRef(this.input);
 	},
 
 	measureAndSize: function(text) {
