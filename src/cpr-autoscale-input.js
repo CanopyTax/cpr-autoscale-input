@@ -54,6 +54,6 @@ var CanopyAutoscaleInput = React.createClass({
 	}
 });
 
-if (window && !window.CanopyAutoscaleInput) window.CanopyAutoscaleInput = CanopyAutoscaleInput;
+if (typeof window !== "undefined" && window && !window.CanopyAutoscaleInput) window.CanopyAutoscaleInput = CanopyAutoscaleInput;
 
 export default CanopyAutoscaleInput;
