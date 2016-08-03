@@ -45,6 +45,7 @@ var CanopyAutoscaleInput = React.createClass({
 	render: function() {
 		return (
 			<input
+				onBlur={e => this.props.onBlur && this.props.onBlur(e)}
 				ref={ref => this.input = ref}
 				name={this.props.propName}
 				value={this.props.value}
