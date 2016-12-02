@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 var html = function(size, family) {
 	return `<span style="font-family:${family};font-size:${size}; font-weight:400;"></span>`;
