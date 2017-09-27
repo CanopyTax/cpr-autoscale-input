@@ -4,18 +4,18 @@ var html = function(size, family) {
 	return `<span style="font-family:${family};font-size:${size}; font-weight:400;"></span>`;
 };
 
-var CanopyAutoscaleInput = React.createClass({
+export default class CanopyAutoscaleInput extends React.Component{
 
-	componentWillReceiveProps: function(props) {
+	componentWillReceiveProps(props) {
 		this.measureAndSize(props.value);
-	},
+	};
 
-	componentDidMount: function() {
+	componentDidMount() {
 		this.measureAndSize();
 		if (this.props.getInputRef) this.props.getInputRef(this.input);
-	},
+	};
 
-	measureAndSize: function(text) {
+	measureAndSize = (text) => {
 		text = text || this.input.value;
 		if (this.props.inputAttrs && this.props.inputAttrs.placeholder) text = text || this.props.inputAttrs.placeholder;
 		text = text.length < 2 ? 'HI' : text;
@@ -34,14 +34,15 @@ var CanopyAutoscaleInput = React.createClass({
 
 		this.input.style.width = wrapperDiv.offsetWidth + 6 + 'px';
 		this.input.parentNode.removeChild(wrapperDiv);
-	},
-	handleChange: function(property, event) {
+	};
+
+	handleChange = (property, event) => {
 		this.measureAndSize();
 		// Call parent callback
 		this.props.onChange(property, event);
-	},
+	};
 
-	render: function() {
+	render() {
 		return (
 			<input
 				onBlur={e => this.props.onBlur && this.props.onBlur(e)}
@@ -52,8 +53,6 @@ var CanopyAutoscaleInput = React.createClass({
 				readOnly={this.props.readOnly} {...this.props.inputAttrs}/>
 		);
 	}
-});
+};
 
 if (typeof window !== "undefined" && window && !window.CanopyAutoscaleInput) window.CanopyAutoscaleInput = CanopyAutoscaleInput;
-
-export default CanopyAutoscaleInput;
