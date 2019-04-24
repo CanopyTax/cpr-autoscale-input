@@ -6,7 +6,7 @@ var html = function(size, family) {
 
 export default class CanopyAutoscaleInput extends React.Component{
 
-	componentWillReceiveProps(props) {
+	componentDidUpdate(props) {
 		this.measureAndSize(props.value);
 	};
 
