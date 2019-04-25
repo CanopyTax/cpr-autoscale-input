@@ -5,7 +5,6 @@ var version = require('./package.json').version;
 var name = require('./package.json').name;
 
 module.exports = {
-  watch: true,
 	entry: "./src/cpr-autoscale-input.js",
 	output: {
 		path: path.resolve(__dirname, 'build'),
